@@ -27,7 +27,8 @@
     "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.13",
     "mkdirp": "^0.5.0",
-    "propagate": "^2.0.0"
+    "propagate": "^2.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "assert-rejects": "^1.0.0",
@@ -66,7 +67,9 @@
     "prettier": "prettier --write \"**/*.@(js|json|md|ts|yml)\"",
     "prettier:check": "prettier --check \"**/*.@(js|json|md|ts|yml)\"",
     "dtslint": "dtslint types",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "nyc": {
     "reporter": [
@@ -82,5 +85,6 @@
     "index.js",
     "lib",
     "types/index.d.ts"
-  ]
+  ],
+  "snyk": true
 }
